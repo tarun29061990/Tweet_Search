@@ -1,0 +1,55 @@
+<!-- tarun Chaudhary 
+B tech (EE)
+IIT Rajasthan
+tarun29061990@gmail.com
+
+tarun29061990@github*/-->
+
+
+<!doctype html>
+<html>
+<head>
+	<title>Tweet Search</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="http://cloud.github.com/downloads/emberjs/ember.js/ember-0.9.6.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<div id="main">
+	<script type="text/x-handlebars">
+		<div id="frm">
+			<b>Load Tweets for: </b>
+			{{view App.SearchTextField placeholder="Search Keyword" valueBinding="App.searchResultsController.query"}}
+			<button {{action "refresh" target="App.searchResultsController"}}>Go!</button>
+
+			
+			<a href="https://www.facebook.com/tarun29061990"><img src="image.jpg" height="40px" widht="40px" alt="me"/></a>
+			<h>
+			<p>Created By Tarun Chaudhary (tarun29061990@gmail.com)</p>
+
+			<h>
+		</div>
+		<div id="content">
+			
+			<div id="tweets">
+				<h3>Tweets</h3>
+				<ul>
+					{{#each App.searchResultsController.reverse}}
+						<li>
+							<img {{bindAttr src="profile_image_url"}} alt="pic" />
+							<span>{{created_at}}</span>
+							<h3>{{from_user_name}}<h3>
+							<p>
+							{{text}}</p>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</script>
+</div>
+</div>
+</body>
+</html>

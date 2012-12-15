@@ -1,0 +1,124 @@
+/*  tarun Chaudhary 
+B tech (EE)
+IIT Rajasthan
+tarun29061990@gmail.com
+
+tarun29061990@github*/
+
+
+* {
+	font-family: 'tahoma', sans-serif;
+}
+body {
+	
+	background-color: #eeeeee;
+	opacity: 0.95;
+}
+#main #frm {
+	margin: 0 auto 15px auto;
+	width: 1000px;
+	text-align: center;
+}
+
+#main #frm button{
+	width:100px;
+	height:30px;
+	border-radius: 10px;
+
+}
+
+
+
+#main #frm a{
+	position: absolute;
+	left:990px;
+}
+
+#main #frm h p{
+	position: absolute;
+	top:0px;
+	left: 1015px;
+}
+#main #content {
+	width: 1000px;
+	border: 1px solid green;
+	margin: 0 auto;
+}
+	#main #recent {
+		float: left;
+		width: 190px;
+	}
+		#main #recent ol {
+			margin: 0 0 0 15px;
+			padding: 0;
+		}
+			#main #recent old li {
+				padding: 5px;
+			}
+	#main #tweets {
+		width: 1000px;
+		float: left;
+	}
+		
+		#main #tweets ul {
+			padding: 0;
+			border-top: 1px solid #999999;
+		}
+			#main #tweets ul li {
+				text-align: left;
+				margin: 10px;
+				padding: 10px;
+				list-style: none;
+				white-space: nowrap;
+				border-radius: 10px;
+				min-height: 50px;
+				background: #B3EEC7; /* Old browsers */
+				background: -moz-linear-gradient(top,  #B3EEC7 0%, #dddddd 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#B3EEC7), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #B3EEC7 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #B3EEC7 0%,#dddddd 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #B3EEC7 0%,#dddddd 100%); /* IE10+ */
+				background: linear-gradient(top,  #B3EEC7 0%,#dddddd 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B3EEC7', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+			}
+				#main #tweets ul li:hover {
+					background: #cfe7fa; /* Old browsers */
+					background: -moz-linear-gradient(top,  #cfe7fa 0%, #6393c1 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfe7fa), color-stop(100%,#6393c1)); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* IE10+ */
+					background: linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
+				}
+				#main #tweets ul li span {
+					float: right;
+					font-size: 8pt;
+					color: #999793;
+				}
+				#main #tweets ul li img {
+					float: left;
+					margin: 0 10px 0 0;
+					width: 48px;
+					height: 48px;
+				}
+				#main #tweets ul li h3 {
+					font-size: 11pt;
+					margin: 0;
+				}
+				#main #tweets ul li p {
+					margin: 0;
+					font-size: 13pt;
+					font-style: bold;
+					font-family: monospace;
+					white-space: pre;
+  					white-space: pre-wrap;
+  					white-space: pre-line;
+  					white-space: -pre-wrap;
+  					white-space: -o-pre-wrap;
+  					white-space: -moz-pre-wrap;
+  					white-space: -hp-pre-wrap;
+  					word-wrap: break-word;
+				}
+
+
