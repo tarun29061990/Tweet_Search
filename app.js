@@ -21,6 +21,11 @@ App.Tweet=Em.Object.extend({
 
 });
 
+App.Master =Ember.Object.extend({
+	me_url:null,
+	facebook_url:null
+});
+
 /**************************
 * View
 **************************/
@@ -46,7 +51,7 @@ App.searchResultsController=Em.ArrayController.create({
 	content:[],
 	query:'',
 	_idCache: {},
-
+	
 	addTweet: function(tweet) {
     // The `id` from Twitter's JSON
     var id = tweet.get("id");
@@ -92,4 +97,14 @@ App.TimeInterval=Ember.ArrayController.create({
     	}, 5000);
 	}
 });
+
+App.masterController=Ember.ArrayController.create({
+	content:[
+		App.Master.create({
+		me_url:"https://graph.facebook.com/tarun29061990/picture/",
+		facebook_url:"https://www.facebook.com/tarun29061990/",
+		})
+	]
+});
+
 

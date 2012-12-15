@@ -1,4 +1,4 @@
-/*  tarun Chaudhary 
+/*  Tarun Chaudhary 
 B tech (EE)
 IIT Rajasthan
 tarun29061990@gmail.com
@@ -32,12 +32,33 @@ body {
 #main #frm a{
 	position: absolute;
 	left:990px;
+	
+}
+
+#main #frm a img{
+	-webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+#main #frm a img:hover{
+	width:60px;
+	height:60px;
 }
 
 #main #frm h p{
 	position: absolute;
 	top:0px;
-	left: 1015px;
+	left: 1020px;
 }
 #main #content {
 	width: 1000px;
@@ -101,6 +122,22 @@ body {
 					margin: 0 10px 0 0;
 					width: 48px;
 					height: 48px;
+					-webkit-transition-property: all;
+  					-moz-transition-property: all;
+  					-o-transition-property: all;
+  					transition-property: all;
+  					-webkit-transition-duration: 0.3s;
+  					-moz-transition-duration: 0.3s;
+  					-o-transition-duration: 0.3s;
+  					transition-duration: 0.3s;
+  					-webkit-transition-timing-function: ease-out;
+  					-moz-transition-timing-function: ease-out;
+  					-o-transition-timing-function: ease-out;
+  					transition-timing-function: ease-out;
+				}
+				#main #tweets ul li img:hover{
+					width:70px;
+					height:70px;
 				}
 				#main #tweets ul li h3 {
 					font-size: 11pt;

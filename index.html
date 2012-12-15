@@ -24,12 +24,15 @@ tarun29061990@github*/-->
 			{{view App.SearchTextField placeholder="Search Keyword" valueBinding="App.searchResultsController.query"}}
 			<button {{action "refresh" target="App.searchResultsController"}}>Go!</button>
 
-			
-			<a href="https://www.facebook.com/tarun29061990"><img src="image.jpg" height="40px" widht="40px" alt="me"/></a>
+			{{#each App.masterController}}
+			<a {{bindAttr href="facebook_url"}}>
+			<img {{bindAttr src="me_url"}} height="40px" width="40px" alt="me"/>
+			</a>
+			{{/each}}
 			<h>
 			<p>Created By Tarun Chaudhary (tarun29061990@gmail.com)</p>
 
-			<h>
+			</h>
 		</div>
 		<div id="content">
 			
