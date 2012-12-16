@@ -103,7 +103,7 @@ App.TimeInterval=Ember.ArrayController.create({
 	interval:function(){
 		setInterval(function() {
       	App.searchResultsController.refresh();
-    	}, 20000);
+    	}, 15000);
 	},
 
 	bigInterval:function(){
