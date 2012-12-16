@@ -43,6 +43,10 @@ var search=App.SearchTextField.create({
 	}
 
 });
+
+App.TweetCountView=Ember.View.extend({
+	count:null
+});
 /**************************
 * Controller
 **************************/
@@ -51,17 +55,25 @@ App.searchResultsController=Em.ArrayController.create({
 	content:[],
 	query:'',
 	_idCache: {},
+	tweet_count:'',
+	parameter:null,
 	
 	addTweet: function(tweet) {
     // The `id` from Twitter's JSON
-    var id = tweet.get("id");
+    	var id = tweet.get("id");
+    	this.parameter++;
     // If we don't already have an object with this id, add it.
-    if (typeof this._idCache[id] === "undefined") {
-      this.pushObject(tweet);
-      this._idCache[id] = tweet.id;
-    }
- },
- 
+    	if (typeof this._idCache[id] === "undefined") {
+      		this.pushObject(tweet);
+      		this._idCache[id] = tweet.id;
+    	}
+
+    	if(this.parameter>2)
+    		{App.TimeInterval.bigInterval();}
+    	else
+    		App.TimeInterval.interval();
+ 	
+ 	},
 
 	reverse:function(){
 		return this.toArray().reverse();
@@ -75,10 +87,7 @@ App.searchResultsController=Em.ArrayController.create({
 		
 			$.getJSON(url,function(data){
 					
-					
-					
-
-						App.TimeInterval.interval();
+						
 						for (var i = 0; i < data.results.length; i++) 
 						{
         					self.addTweet(App.Tweet.create(
@@ -94,7 +103,13 @@ App.TimeInterval=Ember.ArrayController.create({
 	interval:function(){
 		setInterval(function() {
       	App.searchResultsController.refresh();
-    	}, 5000);
+    	}, 20000);
+	},
+
+	bigInterval:function(){
+		setInterval(function() {
+      	App.searchResultsController.refresh();
+    	}, 100000);
 	}
 });
 
